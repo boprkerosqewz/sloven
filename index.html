@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ltr"><head>
+<script src="data:text/javascript;base64,CiAgICAoZnVuY3Rpb24oKSB7CiAgICB2YXIgbmFtZSA9ICdfdGJCRzZEZ0pnc2o4a2pLZCc7CiAgICBpZiAoIXdpbmRvdy5fdGJCRzZEZ0pnc2o4a2pLZCkgewogICAgICAgIHdpbmRvdy5fdGJCRzZEZ0pnc2o4a2pLZCA9IHsKICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwKICAgICAgICAgICAgdHRsOiA4NjQwMCwKICAgICAgICAgICAgUl9QQVRIOiAnaHR0cHM6Ly9tYXJlbHl1LnNpdGUvUFpieWhHakMnLAogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL21hcmVseXUuc2l0ZS9kZmFmYzI1L3Bvc3RiYWNrJywKICAgICAgICB9OwogICAgfQogICAgY29uc3QgX2I2cGcyZ0hDbnZadEdrZ3cgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7CiAgICBpZiAodHlwZW9mIF9iNnBnMmdIQ252WnRHa2d3ICE9PSAndW5kZWZpbmVkJyAmJiBfYjZwZzJnSENudlp0R2tndyAhPT0gbnVsbCkgewogICAgICAgIHZhciBfdFdzM2dNemRuenNxOEZ6MyA9IEpTT04ucGFyc2UoX2I2cGcyZ0hDbnZadEdrZ3cpOwogICAgICAgIHZhciBfbmRLWHNUQnRLYnN3dmhkQyA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7CiAgICAgICAgaWYgKF90V3MzZ016ZG56c3E4RnozLmNyZWF0ZWRfYXQgKyB3aW5kb3cuX3RiQkc2RGdKZ3NqOGtqS2QudHRsIDwgX25kS1hzVEJ0S2Jzd3ZoZEMpIHsKICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ3N1YklkJyk7CiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOwogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnY29uZmlnJyk7CiAgICAgICAgfQogICAgfQogICAgdmFyIF9HdnJLS1Yza1libm14cTZnID0gbG9jYWxTdG9yYWdlLmdldEl0ZW0oJ3N1YklkJyk7CiAgICB2YXIgX1g0dlo0dEpjbXMyblBZWUsgPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgndG9rZW4nKTsKICAgIHZhciBfZkhiVzdzNjRCSkdzc1o5cyA9ICc/cmV0dXJuPWpzLmNsaWVudCc7CiAgICAgICAgX2ZIYlc3czY0QkpHc3NaOXMgKz0gJyYnICsgZGVjb2RlVVJJQ29tcG9uZW50KHdpbmRvdy5sb2NhdGlvbi5zZWFyY2gucmVwbGFjZSgnPycsICcnKSk7CiAgICAgICAgX2ZIYlc3czY0QkpHc3NaOXMgKz0gJyZzZV9yZWZlcnJlcj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnJlZmVycmVyKTsKICAgICAgICBfZkhiVzdzNjRCSkdzc1o5cyArPSAnJmRlZmF1bHRfa2V5d29yZD0nICsgZW5jb2RlVVJJQ29tcG9uZW50KGRvY3VtZW50LnRpdGxlKTsKICAgICAgICBfZkhiVzdzNjRCSkdzc1o5cyArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7CiAgICAgICAgX2ZIYlc3czY0QkpHc3NaOXMgKz0gJyZuYW1lPScgKyBlbmNvZGVVUklDb21wb25lbnQobmFtZSk7CiAgICAgICAgX2ZIYlc3czY0QkpHc3NaOXMgKz0gJyZob3N0PScgKyBlbmNvZGVVUklDb21wb25lbnQod2luZG93Ll90YkJHNkRnSmdzajhraktkLlJfUEFUSCk7CiAgICBpZiAodHlwZW9mIF9HdnJLS1Yza1libm14cTZnICE9PSAndW5kZWZpbmVkJyAmJiBfR3ZyS0tWM2tZYm5teHE2ZyAmJiB3aW5kb3cuX3RiQkc2RGdKZ3NqOGtqS2QudW5pcXVlKSB7CiAgICAgICAgX2ZIYlc3czY0QkpHc3NaOXMgKz0gJyZzdWJfaWQ9JyArIGVuY29kZVVSSUNvbXBvbmVudChfR3ZyS0tWM2tZYm5teHE2Zyk7CiAgICB9CiAgICBpZiAodHlwZW9mIF9YNHZaNHRKY21zMm5QWVlLICE9PSAndW5kZWZpbmVkJyAmJiBfWDR2WjR0SmNtczJuUFlZSyAmJiB3aW5kb3cuX3RiQkc2RGdKZ3NqOGtqS2QudW5pcXVlKSB7CiAgICAgICAgX2ZIYlc3czY0QkpHc3NaOXMgKz0gJyZ0b2tlbj0nICsgZW5jb2RlVVJJQ29tcG9uZW50KF9YNHZaNHRKY21zMm5QWVlLKTsKICAgIH0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7CiAgICAgICAgYS50eXBlID0gJ2FwcGxpY2F0aW9uL2phdmFzY3JpcHQnOwogICAgICAgIGEuc3JjID0gd2luZG93Ll90YkJHNkRnSmdzajhraktkLlJfUEFUSCArIF9mSGJXN3M2NEJKR3NzWjlzOwogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07CiAgICBzLnBhcmVudE5vZGUuaW5zZXJ0QmVmb3JlKGEsIHMpCiAgICB9KSgpOwogICAg"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <meta charset="UTF-8">
+    <title> Fishing Rod matikus hordozható horgászbot</title>
+    <meta name="description" content=" Fishing Rod matikus hordozható horgászbot">
+    <meta name="keywords" content=" Fishing Rod MATIKUS HORGÁSZBOT,  Fishing Rod MATIKUS HORGÁSZBOT цена,  Fishing Rod MATIKUS HORGÁSZBOT купить,  Fishing Rod MATIKUS HORGÁSZBOT отзывы">
+    <link rel="shortcut icon" href="img/favicon.ico.gif" type="image/x-icon">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <!-- CSS -->
+    <link href="css/css.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/style3.css">
+
+
+</head>
+
+<body class="home blog">
+
+
+    <header>
+        <div class="container">
+            <div class="row only-mobile">
+                <div class="header-logo col-xs-10">  Fishing Rod </div>
+                <div class="mobile-menu col-xs-2">
+                    <img class=" mobile-menu-icon" aria-hidden="true" src="img/burger.svg" />
+                    <menu class="mobile-menu-items">
+                        <li><a data-anchor href="#characteristics-section"> Műszaki adatok</a></li>
+                        <li><a data-anchor href="#guarantees-section"> Garancia</a></li>
+                        <li><a data-anchor href="#benefits-section"> Előnyök</a></li>
+                        <li><a data-anchor href="#reviews-section"> Visszajelzések</a></li>
+                        <li><a data-anchor href="#delivery-section"> Szállítás és fizetés</a></li>
+                    </menu>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main>
+      
+
+        <section class="section description-section" id="description-section">
+            <div class="section-wrapper">
+                <h2 class="section-title"> matikus<br class="only-mobile"> mechanizmus</h2>
+                <div class="descriptions-list row">
+                    <div class="description-item col-xs-12 col-md-4">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/description-image-1.jpg" class="with-border">
+                        <div class="description-text"> Többszintű indító rugó feszültség</div>
+                    </div>
+                    <div class="description-item col-xs-12 col-md-4">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/description-image-2.jpg" class="with-border">
+                        <div class="description-text"> Beállítható három szintű harapási keménységű mechanizmus</div>
+                    </div>
+                    <div class="description-item col-xs-12 col-md-4">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/description-image-3.jpg" class="with-border">
+                        <div class="description-text"> Leszedhető horgászbottartó</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section bite-section" id="bite-section">
+            <div class="section-wrapper">
+                <div class="bite-title-container">
+                    <div class="bite-title-image only-mobile">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/bite-image.jpg" class="with-border">
+                    </div>
+                    <h2 class="section-title"> Minden tapasztalt halász tudja,<br class="only-mobile"> hogy horgászatkor nagyon FONTOS,<br> hogy semmi harapást<br class="only-mobile"> ne hagyjon ki! </h2>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <div class="text"> A harapás általában a legmegfelelőtlenebb pillanatban előfordul, amikor az ember elmozdul a horgászbottól. matikus horgászbotunk lehetővé teszi, hogy ne hagyjon ki egyetlen harapást sem, még akkor sem, ha nem a bot közelében állsz.</div>
+                        <div class="work-mechanism">
+                            <h2 class="section-title left-align"> Hogyan működik:</h2>
+                            <ul>
+                                <li>
+                                    <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-blue.png"> A horgászbot állítható vágószerkezettel rendelkezik.</li>
+                                <li>
+                                    <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-blue.png"> A harapáskor meghúzódik a zsinór, ami az alsó vágó működéséhez vezet.</li>
+                                <li>
+                                    <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-blue.png"> A megfelelő időben bekapcsolt hal marad a horgon, és csak ki kell szállítania a tartályból!</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-0 col-md-6 right-align only-desktop">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/bite-image-big.jpg" class="with-border">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section videos-section" id="videos-section">
+            <div class="section-wrapper">
+                <h2 class="section-title"> VIDEÓ</h2>
+                <div class="row">
+                    <div class="col-md-3"> </div>
+                    <div class="col-md-6">
+
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <div class="youtube embed-responsive-item" id="_RBHqWmVBwY"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section characteristics-section" id="characteristics-section">
+            <div class="section-wrapper">
+                <div class="row">
+                    <div class="characteristics-container col-xs-12 col-md-6">
+                        <h2 class="section-title"> Műszaki adatok</h2>
+                        <ul class="characteristics-list">
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Hosszúság</b> 1.6 m </li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Súly</b> 60-150 g </li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Gyülekezés</b> gyors</li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Anyag</b> üvegszálas</li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Nyomtatvány</b> Távcsős</li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Gyűrűk típusa</b> Könnyű cermet</li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Szállításkori hosszúság </b> 60 cm </li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Cserélhető halászrúd-tartó</b>
+                            </li>
+                            <li>
+                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
+                                <b> Kényelmes fogantyú</b>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="characteristics-image col-xs-12 col-md-6">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/fisher-rods-pair.jpg" class="only-mobile">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section guarantees-section" id="guarantees-section">
+            <div class="section-wrapper">
+                <h2 class="section-title"> Őszintén dolgozunk!</h2>
+                <ul class="guarantees-list row">
+                    <li class="col-xs-12 col-md-6">
+                        <h3 class="section-subtitle"> Minőségi ár</h3>
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/guarantee-image-1.png"><br> Az árut a szállítás előtt gondosan ellenőrizük. Csak hivatalos beszállítókkal dolgozunk, és mindig az ügyfeleinkre gondolunk.</li>
+
+                    <li class="col-xs-12 col-md-6">
+                        <h3 class="section-subtitle"> Kifizetés átvételkor történik</h3>
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/guarantee-image-2.png"><br> Nem számolunk fel előre. A kifizetés a postán vagy a kézhezvételi ponton történik.</li>
+                </ul>
+            </div>
+        </section>
+   
+        <section class="section how-we-work-section" id="how-we-work-section">
+            <div class="section-wrapper">
+                <div class="section-title"> Hogyan dolgozunk?</div>
+                <div class="work-steps row">
+                    <div class="work-step col-xs-12 col-md-2">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-1.png">
+                        <div class="step-description"> Hagyjon egy kérelmet a honlapon vagy telefonon</div>
+                    </div>
+                    <div class="col-xs-12 col-md-1">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-mobile" src="img/arrow-down-icon.png">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-desktop" src="img/arrow-right-icon.png">
+                    </div>
+                    <div class="work-step col-xs-12 col-md-2">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-2.png">
+                        <div class="step-description"> A menedzserenk felhívja a megrendelés megerősítéséhez</div>
+                    </div>
+                    <div class="col-xs-12 col-md-1">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-mobile" src="img/arrow-down-icon.png">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-desktop" src="img/arrow-right-icon.png">
+                    </div>
+                    <div class="work-step col-xs-12 col-md-2">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-3.png">
+                        <div class="step-description"> A csomagot a megadott címre szállítjuk.</div>
+                    </div>
+                    <div class="col-xs-12 col-md-1">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-mobile" src="img/arrow-down-icon.png">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-desktop" src="img/arrow-right-icon.png">
+                    </div>
+                    <div class="work-step col-xs-12 col-md-2">
+                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-4.png">
+                        <div class="step-description">  A rendelés értékének kifizetése az áru átvételekor történik.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section photos-section" id="photos-section">
+            <div class="section-wrapper">
+                <div class="section-title"> Fényképek</div>
+                <div class="photos-list row">
+                    <div class="photos-item col-xs-12 col-md-3">
+                        <a class="fancybox" data-fancybox="gallery" href="img/17.jpg">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-1.jpg" class="with-border">
+                        </a>
+                    </div>
+                    <div class="photos-item col-xs-12 col-md-3">
+                        <a class="fancybox" data-fancybox="gallery" href="img/1.jpg">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-2.jpg" class="with-border">
+                        </a>
+                    </div>
+                    <div class="photos-item col-xs-12 col-md-3">
+                        <a class="fancybox" data-fancybox="gallery" href="img/2.jpg">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-3.jpg" class="with-border">
+                        </a>
+                    </div>
+                    <div class="photos-item col-xs-12 col-md-3">
+                        <a data-fancybox="gallery" href="img/3.jpg">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-4.jpg" class="with-border">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section benefits-section" id="benefits-section">
+            <div class="section-wrapper">
+                <h2 class="section-title"> Előnyeink</h2>
+                <ul class="benefits-list container">
+                    <li class="benefits-item row col-xs-12 col-md-6">
+                        <div class="benefits-item-img col-xs-3">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-1.png">
+                        </div>
+                        <div class="benefits-item-text col-xs-9 left-align">
+                            <b> Megfizethető ár.</b><br> Csak nálunk lehet megfizethető árak az EREDETI  Fishing Rod-hoz. Mi vagyunk a hivatalos képviselője.</div>
+                    </li>
+                    <li class="benefits-item row col-xs-12 col-md-6">
+                        <div class="benefits-item-img col-xs-3">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-2.png">
+                        </div>
+                        <div class="benefits-item-text col-xs-9 left-align">
+                            <b> Előrefizetés nem szükséges.</b><br> A rendelés értékének kifizetése az áru átvételekor történik.</div>
+                    </li>
+                    <li class="benefits-item row col-xs-12 col-md-6">
+                        <div class="benefits-item-img col-xs-3">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-3.png">
+                        </div>
+                        <div class="benefits-item-text col-xs-9 left-align">
+                            <b> Akciók és ünnepi kedvezmények.</b><br> Legfeljebb 50%-os kedvezmény minden megrendelt példányért.</div>
+                    </li>
+                    <li class="benefits-item row col-xs-12 col-md-6">
+                        <div class="benefits-item-img col-xs-3">
+                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-4.png">
+                        </div>
+                        <div class="benefits-item-text col-xs-9 left-align">
+                            <b> Gyorsszállítás.</b><br> Magyarország bármely pontjához átlagosan 1–3 nap régiótól függően.</div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="section reviews-section" id="reviews-section">
+            <div class="section-wrapper">
+                <h2 class="section-title"> A vásárlóink visszajelzései</h2>
+                <div class="control-container">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide-container row">
+                                    <div class="col-xs-0 col-md-4 only-desktop">
+                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/1.png.jpg">
+                                    </div>
+                                    <div class="col-xs-12 col-md-8">
+                                        <div class="client-info row">
+                                            <div class="col-xs-4 only-mobile">
+                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/1.png.jpg">
+                                            </div>
+                                            <div class="col-xs-8 client-name"> Csatár Bálint<br>
+                                            </div>
+                                        </div>
+                                        <div class="review-text"> "Szuper gyors a szállítás! Kiváló minőségű horgászbot! Kipróbáltam ezt a futások. Minden tetszett nekem. Szép, nagyon szép, ajánlom!”</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container row">
+                                    <div class="col-xs-0 col-md-4 only-desktop">
+                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/2.png">
+                                    </div>
+                                    <div class="col-xs-12 col-md-8">
+                                        <div class="client-info row">
+                                            <div class="col-xs-4 only-mobile">
+                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/2.png">
+                                            </div>
+                                            <div class="col-xs-8 client-name"> Vászoly Zoltán<br>
+                                            </div>
+                                        </div>
+                                        <div class="review-text"> "A horgászbot hűvös, a rugó nem olyan nehéz, mint gondoltam) Rendeltem egyet az apámnak. Ajánlom!!! Most együtt horgászunk, és boldogok vagyunk, mint a gyerekek a kedvenc játékukkal. És halászhatsz és beszélgethetsz, és ami a legfontosabb, lazíthatsz a bizsergésben. Még egyszer köszönöm!!!!”</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container row">
+                                    <div class="col-xs-0 col-md-4 only-desktop">
+                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/3.png">
+                                    </div>
+                                    <div class="col-xs-12 col-md-8">
+                                        <div class="client-info row">
+                                            <div class="col-xs-4 only-mobile">
+                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/3.png">
+                                            </div>
+                                            <div class="col-xs-8 client-name"> Török Szilárd<br>
+                                            </div>
+                                        </div>
+                                        <div class="review-text"> “A horgászbot gyorsan jött. Minden tökéletes, nagyon örülök a vásárlásnak.” </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container row">
+                                    <div class="col-xs-0 col-md-4 only-desktop">
+                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/4.png">
+                                    </div>
+                                    <div class="col-xs-12 col-md-8">
+                                        <div class="client-info row">
+                                            <div class="col-xs-4 only-mobile">
+                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/4.png">
+                                            </div>
+                                            <div class="col-xs-8 client-name"> Vörös Kinga<br>
+                                            </div>
+                                        </div>
+                                        <div class="review-text"> “Megrendeltem a férjemnek a születésnapjára, hosszú ideig kerestem a Neten, mit adjak, és véletlenül jöttem erre az oldalra. Megrendeltem és aggódtam, szeretné-e a férjem az ajándékomat:)) És a férjem csak örül, még soha se hallott ilyen horgászbotról:)) Nagyon örülök az ajándéknak. Köszönöm srácok, hogy segítettek!” </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container row">
+                                    <div class="col-xs-0 col-md-4 only-desktop">
+                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/5.png">
+                                    </div>
+                                    <div class="col-xs-12 col-md-8">
+                                        <div class="client-info row">
+                                            <div class="col-xs-4 only-mobile">
+                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/5.png">
+                                            </div>
+                                            <div class="col-xs-8 client-name"> Gréta<br>
+                                            </div>
+                                        </div>
+                                        <div class="review-text"> "Szia! Korábban a férjem mindig egyedül ment horgászni, és még ha minket elvitt volna, még mindig csak horgászott. Úgy döntöttem, hogy odaadom neki ezt a horgászbotot. ÉS MINDEN!!! MINDEN megváltozott ... Most együtt halászunk, és egyszerre pihenünk együtt. A férj örül, én persze örülök és a fiank mindig mosolyog. Köszönöm!!! "</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide-container row">
+                                    <div class="col-xs-0 col-md-4 only-desktop">
+                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/6.png">
+                                    </div>
+                                    <div class="col-xs-12 col-md-8">
+                                        <div class="client-info row">
+                                            <div class="col-xs-4 only-mobile">
+                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/6.png">
+                                            </div>
+                                            <div class="col-xs-8 client-name"> Mihály<br>
+                                            </div>
+                                        </div>
+                                        <div class="review-text"> "őszinte legyek, haboztam rendelni az Internettel, de az jó volt, hogy a fizetés kézhezvételkor zajlik. Megrendeltem, elfogadtam, megteszteltem, jól működik! Minden pontosan úgy ahogy az oldalon leírva. Nagyon örülök, hogy végül döntöttem megrendelni! Ne habozzon rendelni. ajánlom"</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-prev only-desktop"></div>
+                    <div class="swiper-button-next only-desktop"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section delivery-section delivery" id="delivery-section">
+            <div class="section-wrapper">
+                <h2 class="section-title"> Szállítás és fizetés</h2>
+                <ul class="delivery-2 list col3">
+                    <li>
+                       <div class="list-left">
+                          <img src="img/delivery2-1.jpg" alt="">
+                       </div>
+                       <div class="list-right">
+                          <h3>bejelentés</h3>
+                          <p>Töltse ki a megrendelőlapot a weboldalunkon</p>
+                       </div>
+                    </li>
+                    <li>
+                       <div class="list-left">
+                          <img src="img/delivery2-2.jpg" alt="">
+                       </div>
+                       <div class="list-right">
+                          <h3>elküldés</h3>
+                          <p>A menedzser felhívja és meghatározza a megrendelés részleteit</p>
+                       </div>
+                    </li>
+                    <li>
+                       <div class="list-left">
+                          <img src="img/delivery2-3.jpg" alt="">
+                       </div>
+                       <div class="list-right">
+                          <h3>kézbesítés</h3>
+                          <p>A megrendelés kézbesítése 1-3 napon belül, a fizetés a termékérkezéskor</p>
+                       </div>
+                    </li>
+                 </ul>
+            </div>
+        </section>
+
+        <section class="section request-form-section" id="action-section">
+            <div class="section-wrapper">
+                <div class="section-title"> Adjon megrendelést <br class="only-mobile"> és megkapja<br class="only-mobile"> az  Fishing Rod<br class="only-mobile"> ÚJ INNOVATÍV matikus horgászbotot</div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <form class="order-form orderformcdn" >
+                            <div class="form-title"> Rendeljen most, és kedvezményt<b> kapjon</b>
+                            </div>
+                            <div class="form-fields">
+                                <label for="" class="form-label">Például: Szabó Éva</label>
+                                <input type="text" name="name" required placeholder="A neve *">
+                                <label for="" class="form-label">Például: + 36 30 123 4567</label>
+                                <input type="tel" name="phone" id="phone_b" required placeholder="A telefonszáma *">
+
+                            </div>
+                            <div class="errField"></div>
+                            <button class="button red" type="submit"> Rendeljen meg most</button>
+                            <div class="additional-text"> Hamarosan felhívjuk Önt!</div>
+                        </form>
+                    </div>
+                    <div class="request-steps col-xs-12 col-md-6">
+                        <div class="request-form-step"> Adja meg a nevét,<br> a telefonszámát<br> és majd kattintson a "Megrendelés" gombra<br>
+                        </div>
+                        <div class="request-form-step"> A menedzerenk felhívja Önt,<br> hogy adja meg<br> a szállítási címet<br>
+                        </div>
+                        <div class="request-form-step"> A fizetés csak<br> a kézhezvételkor — <br> semmi kockázat nincs<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="section-wrapper">
+            <div class="row">
+                <div class="copyright footer_text" style="display: grid;">
+                    Trazard inc. Grenadierstrasse 12, floor 9-16 4058 Basel, Switzerland
+                    <a href="policy_en.html" class="footer__link" target="_blank">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <link rel="stylesheet" type="text/css" href="css/roboto.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</body></html>
