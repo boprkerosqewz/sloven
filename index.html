@@ -1,459 +1,116 @@
-<!DOCTYPE html>
-<html lang="ltr"><head>
-<script src="data:text/javascript;base64,ICAgIChmdW5jdGlvbigpIHsNCiAgICB2YXIgbmFtZSA9ICdfekI3cFRyQ1FaUnBtdnhzbSc7DQogICAgaWYgKCF3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20pIHsNCiAgICAgICAgd2luZG93Ll96QjdwVHJDUVpScG12eHNtID0gew0KICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwNCiAgICAgICAgICAgIHR0bDogODY0MDAsDQogICAgICAgICAgICBSX1BBVEg6ICdodHRwczovL2tpa2V0eW5nLmZ1bi9QWmJ5aEdqQycsDQogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL2tpa2V0eW5nLmZ1bi9kZmFmYzI1L3Bvc3RiYWNrJywNCiAgICAgICAgfTsNCiAgICB9DQogICAgY29uc3QgX0R6M2JjS0xkNjFoMjcya0ogPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7DQogICAgaWYgKHR5cGVvZiBfRHozYmNLTGQ2MWgyNzJrSiAhPT0gJ3VuZGVmaW5lZCcgJiYgX0R6M2JjS0xkNjFoMjcya0ogIT09IG51bGwpIHsNCiAgICAgICAgdmFyIF9qd1d2N0hEU0ZNanlZRkQ4ID0gSlNPTi5wYXJzZShfRHozYmNLTGQ2MWgyNzJrSik7DQogICAgICAgIHZhciBfUHFQRnFmWjJQTXlqUVY3MyA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7DQogICAgICAgIGlmIChfandXdjdIRFNGTWp5WUZEOC5jcmVhdGVkX2F0ICsgd2luZG93Ll96QjdwVHJDUVpScG12eHNtLnR0bCA8IF9QcVBGcWZaMlBNeWpRVjczKSB7DQogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnc3ViSWQnKTsNCiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOw0KICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOw0KICAgICAgICB9DQogICAgfQ0KICAgIHZhciBfTE55ZmZITU02c1Q1eG01QyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOw0KICAgIHZhciBfUmp3R2p0dms4cFQ2NEc0YyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCd0b2tlbicpOw0KICAgIHZhciBfWnJyM01zOTFSUlBXS3N5RyA9ICc/cmV0dXJuPWpzLmNsaWVudCc7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJnNlX3JlZmVycmVyPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQucmVmZXJyZXIpOw0KCQkNCiAgICB2YXIgbWF4QUcgPSAwOw0KICAgIGZ1bmN0aW9uIG9uTW90aW9uQ2hhbmdlKGUpIHsNCgl2YXIgYWcgPSBlLmFjY2VsZXJhdGlvbkluY2x1ZGluZ0dyYXZpdHk7DQoJZm9yKHZhciBpIGluIGFnKXsNCiAgICBpZihNYXRoLmFicyhtYXhBRykgPCBNYXRoLmFicyhhZ1tpXSkpew0KICAgIG1heEFHID0gYWdbaV07DQogICAgIH0NCiAgICAgfQ0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmRlZmF1bHRfa2V5d29yZD0nICttYXhBRy50b0ZpeGVkKDIpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmhvc3Q9JyArIGVuY29kZVVSSUNvbXBvbmVudCh3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20uUl9QQVRIKTsNCiAgICBpZiAodHlwZW9mIF9MTnlmZkhNTTZzVDV4bTVDICE9PSAndW5kZWZpbmVkJyAmJiBfTE55ZmZITU02c1Q1eG01QyAmJiB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20udW5pcXVlKSB7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX0xOeWZmSE1NNnNUNXhtNUMpOw0KICAgIH0NCiAgICBpZiAodHlwZW9mIF9SandHanR2azhwVDY0RzRjICE9PSAndW5kZWZpbmVkJyAmJiBfUmp3R2p0dms4cFQ2NEc0YyAmJiB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20udW5pcXVlKSB7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfUmp3R2p0dms4cFQ2NEc0Yyk7DQogICAgfQ0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7DQogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsNCiAgICAgICAgYS5zcmMgPSB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20uUl9QQVRIICsgX1pycjNNczkxUlJQV0tzeUc7DQogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07DQogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQ0KCXdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQoJfQ0KCXdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQoJfSkoKTs="></script>
-    <meta charset="UTF-8">
-    <title> Fishing Rod matikus hordozható horgászbot</title>
-    <meta name="description" content=" Fishing Rod matikus hordozható horgászbot">
-    <meta name="keywords" content=" Fishing Rod MATIKUS HORGÁSZBOT,  Fishing Rod MATIKUS HORGÁSZBOT цена,  Fishing Rod MATIKUS HORGÁSZBOT купить,  Fishing Rod MATIKUS HORGÁSZBOT отзывы">
-    <link rel="shortcut icon" href="img/favicon.ico.gif" type="image/x-icon">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width">
-    <!-- CSS -->
-    <link href="css/css.css" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/style3.css">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="data:text/javascript;base64,ICAgIChmdW5jdGlvbigpIHsNCiAgICB2YXIgbmFtZSA9ICdfekI3cFRyQ1FaUnBtdnhzbSc7DQogICAgaWYgKCF3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20pIHsNCiAgICAgICAgd2luZG93Ll96QjdwVHJDUVpScG12eHNtID0gew0KICAgICAgICAgICAgdW5pcXVlOiBmYWxzZSwNCiAgICAgICAgICAgIHR0bDogODY0MDAsDQogICAgICAgICAgICBSX1BBVEg6ICdodHRwczovL2tpa2V0eW5nLmZ1bi9QWmJ5aEdqQycsDQogICAgICAgICAgICBQX1BBVEg6ICdodHRwczovL2tpa2V0eW5nLmZ1bi9kZmFmYzI1L3Bvc3RiYWNrJywNCiAgICAgICAgfTsNCiAgICB9DQogICAgY29uc3QgX0R6M2JjS0xkNjFoMjcya0ogPSBsb2NhbFN0b3JhZ2UuZ2V0SXRlbSgnY29uZmlnJyk7DQogICAgaWYgKHR5cGVvZiBfRHozYmNLTGQ2MWgyNzJrSiAhPT0gJ3VuZGVmaW5lZCcgJiYgX0R6M2JjS0xkNjFoMjcya0ogIT09IG51bGwpIHsNCiAgICAgICAgdmFyIF9qd1d2N0hEU0ZNanlZRkQ4ID0gSlNPTi5wYXJzZShfRHozYmNLTGQ2MWgyNzJrSik7DQogICAgICAgIHZhciBfUHFQRnFmWjJQTXlqUVY3MyA9IE1hdGgucm91bmQoK25ldyBEYXRlKCkvMTAwMCk7DQogICAgICAgIGlmIChfandXdjdIRFNGTWp5WUZEOC5jcmVhdGVkX2F0ICsgd2luZG93Ll96QjdwVHJDUVpScG12eHNtLnR0bCA8IF9QcVBGcWZaMlBNeWpRVjczKSB7DQogICAgICAgICAgICBsb2NhbFN0b3JhZ2UucmVtb3ZlSXRlbSgnc3ViSWQnKTsNCiAgICAgICAgICAgIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKCd0b2tlbicpOw0KICAgICAgICAgICAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oJ2NvbmZpZycpOw0KICAgICAgICB9DQogICAgfQ0KICAgIHZhciBfTE55ZmZITU02c1Q1eG01QyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdzdWJJZCcpOw0KICAgIHZhciBfUmp3R2p0dms4cFQ2NEc0YyA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCd0b2tlbicpOw0KICAgIHZhciBfWnJyM01zOTFSUlBXS3N5RyA9ICc/cmV0dXJuPWpzLmNsaWVudCc7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmJyArIGRlY29kZVVSSUNvbXBvbmVudCh3aW5kb3cubG9jYXRpb24uc2VhcmNoLnJlcGxhY2UoJz8nLCAnJykpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJnNlX3JlZmVycmVyPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQucmVmZXJyZXIpOw0KCQkNCiAgICB2YXIgbWF4QUcgPSAwOw0KICAgIGZ1bmN0aW9uIG9uTW90aW9uQ2hhbmdlKGUpIHsNCgl2YXIgYWcgPSBlLmFjY2VsZXJhdGlvbkluY2x1ZGluZ0dyYXZpdHk7DQoJZm9yKHZhciBpIGluIGFnKXsNCiAgICBpZihNYXRoLmFicyhtYXhBRykgPCBNYXRoLmFicyhhZ1tpXSkpew0KICAgIG1heEFHID0gYWdbaV07DQogICAgIH0NCiAgICAgfQ0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmRlZmF1bHRfa2V5d29yZD0nICttYXhBRy50b0ZpeGVkKDIpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmxhbmRpbmdfdXJsPScgKyBlbmNvZGVVUklDb21wb25lbnQoZG9jdW1lbnQubG9jYXRpb24uaG9zdG5hbWUgKyBkb2N1bWVudC5sb2NhdGlvbi5wYXRobmFtZSk7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmbmFtZT0nICsgZW5jb2RlVVJJQ29tcG9uZW50KG5hbWUpOw0KICAgICAgICBfWnJyM01zOTFSUlBXS3N5RyArPSAnJmhvc3Q9JyArIGVuY29kZVVSSUNvbXBvbmVudCh3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20uUl9QQVRIKTsNCiAgICBpZiAodHlwZW9mIF9MTnlmZkhNTTZzVDV4bTVDICE9PSAndW5kZWZpbmVkJyAmJiBfTE55ZmZITU02c1Q1eG01QyAmJiB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20udW5pcXVlKSB7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmc3ViX2lkPScgKyBlbmNvZGVVUklDb21wb25lbnQoX0xOeWZmSE1NNnNUNXhtNUMpOw0KICAgIH0NCiAgICBpZiAodHlwZW9mIF9SandHanR2azhwVDY0RzRjICE9PSAndW5kZWZpbmVkJyAmJiBfUmp3R2p0dms4cFQ2NEc0YyAmJiB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20udW5pcXVlKSB7DQogICAgICAgIF9acnIzTXM5MVJSUFdLc3lHICs9ICcmdG9rZW49JyArIGVuY29kZVVSSUNvbXBvbmVudChfUmp3R2p0dms4cFQ2NEc0Yyk7DQogICAgfQ0KICAgIHZhciBhID0gZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnc2NyaXB0Jyk7DQogICAgICAgIGEudHlwZSA9ICdhcHBsaWNhdGlvbi9qYXZhc2NyaXB0JzsNCiAgICAgICAgYS5zcmMgPSB3aW5kb3cuX3pCN3BUckNRWlJwbXZ4c20uUl9QQVRIICsgX1pycjNNczkxUlJQV0tzeUc7DQogICAgdmFyIHMgPSBkb2N1bWVudC5nZXRFbGVtZW50c0J5VGFnTmFtZSgnc2NyaXB0JylbMF07DQogICAgcy5wYXJlbnROb2RlLmluc2VydEJlZm9yZShhLCBzKQ0KCXdpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQoJfQ0KCXdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQoJfSkoKTs="></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Как создать позитивную атмосферу в классе - wikiHow</title>
+<meta name="keywords" content="Как создать позитивную атмосферу в классе - wikiHow" />
+<meta name="description" content="Как создать позитивную атмосферу в классе - wikiHow" />
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900|Quicksand:400,700|Questrial" rel="stylesheet" />
+<link href="default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
+
+<!--[if IE 6]><link href="default_ie6.css" rel="stylesheet" type="text/css" /><![endif]-->
 
 </head>
-
-<body class="home blog">
-
-
-    <header>
-        <div class="container">
-            <div class="row only-mobile">
-                <div class="header-logo col-xs-10">  Fishing Rod </div>
-                <div class="mobile-menu col-xs-2">
-                    <img class=" mobile-menu-icon" aria-hidden="true" src="img/burger.svg" />
-                    <menu class="mobile-menu-items">
-                        <li><a data-anchor href="#characteristics-section"> Műszaki adatok</a></li>
-                        <li><a data-anchor href="#guarantees-section"> Garancia</a></li>
-                        <li><a data-anchor href="#benefits-section"> Előnyök</a></li>
-                        <li><a data-anchor href="#reviews-section"> Visszajelzések</a></li>
-                        <li><a data-anchor href="#delivery-section"> Szállítás és fizetés</a></li>
-                    </menu>
-                </div>
-            </div>
-        </div>
-
-    </header>
-    <main>
-      
-
-        <section class="section description-section" id="description-section">
-            <div class="section-wrapper">
-                <h2 class="section-title"> matikus<br class="only-mobile"> mechanizmus</h2>
-                <div class="descriptions-list row">
-                    <div class="description-item col-xs-12 col-md-4">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/description-image-1.jpg" class="with-border">
-                        <div class="description-text"> Többszintű indító rugó feszültség</div>
-                    </div>
-                    <div class="description-item col-xs-12 col-md-4">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/description-image-2.jpg" class="with-border">
-                        <div class="description-text"> Beállítható három szintű harapási keménységű mechanizmus</div>
-                    </div>
-                    <div class="description-item col-xs-12 col-md-4">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/description-image-3.jpg" class="with-border">
-                        <div class="description-text"> Leszedhető horgászbottartó</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section bite-section" id="bite-section">
-            <div class="section-wrapper">
-                <div class="bite-title-container">
-                    <div class="bite-title-image only-mobile">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/bite-image.jpg" class="with-border">
-                    </div>
-                    <h2 class="section-title"> Minden tapasztalt halász tudja,<br class="only-mobile"> hogy horgászatkor nagyon FONTOS,<br> hogy semmi harapást<br class="only-mobile"> ne hagyjon ki! </h2>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <div class="text"> A harapás általában a legmegfelelőtlenebb pillanatban előfordul, amikor az ember elmozdul a horgászbottól. matikus horgászbotunk lehetővé teszi, hogy ne hagyjon ki egyetlen harapást sem, még akkor sem, ha nem a bot közelében állsz.</div>
-                        <div class="work-mechanism">
-                            <h2 class="section-title left-align"> Hogyan működik:</h2>
-                            <ul>
-                                <li>
-                                    <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-blue.png"> A horgászbot állítható vágószerkezettel rendelkezik.</li>
-                                <li>
-                                    <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-blue.png"> A harapáskor meghúzódik a zsinór, ami az alsó vágó működéséhez vezet.</li>
-                                <li>
-                                    <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-blue.png"> A megfelelő időben bekapcsolt hal marad a horgon, és csak ki kell szállítania a tartályból!</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-xs-0 col-md-6 right-align only-desktop">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/bite-image-big.jpg" class="with-border">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section videos-section" id="videos-section">
-            <div class="section-wrapper">
-                <h2 class="section-title"> VIDEÓ</h2>
-                <div class="row">
-                    <div class="col-md-3"> </div>
-                    <div class="col-md-6">
-
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <div class="youtube embed-responsive-item" id="_RBHqWmVBwY"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section characteristics-section" id="characteristics-section">
-            <div class="section-wrapper">
-                <div class="row">
-                    <div class="characteristics-container col-xs-12 col-md-6">
-                        <h2 class="section-title"> Műszaki adatok</h2>
-                        <ul class="characteristics-list">
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Hosszúság</b> 1.6 m </li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Súly</b> 60-150 g </li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Gyülekezés</b> gyors</li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Anyag</b> üvegszálas</li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Nyomtatvány</b> Távcsős</li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Gyűrűk típusa</b> Könnyű cermet</li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Szállításkori hosszúság </b> 60 cm </li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Cserélhető halászrúd-tartó</b>
-                            </li>
-                            <li>
-                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/check-icon-orange.png">
-                                <b> Kényelmes fogantyú</b>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="characteristics-image col-xs-12 col-md-6">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/fisher-rods-pair.jpg" class="only-mobile">
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section guarantees-section" id="guarantees-section">
-            <div class="section-wrapper">
-                <h2 class="section-title"> Őszintén dolgozunk!</h2>
-                <ul class="guarantees-list row">
-                    <li class="col-xs-12 col-md-6">
-                        <h3 class="section-subtitle"> Minőségi ár</h3>
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/guarantee-image-1.png"><br> Az árut a szállítás előtt gondosan ellenőrizük. Csak hivatalos beszállítókkal dolgozunk, és mindig az ügyfeleinkre gondolunk.</li>
-
-                    <li class="col-xs-12 col-md-6">
-                        <h3 class="section-subtitle"> Kifizetés átvételkor történik</h3>
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/guarantee-image-2.png"><br> Nem számolunk fel előre. A kifizetés a postán vagy a kézhezvételi ponton történik.</li>
-                </ul>
-            </div>
-        </section>
-   
-        <section class="section how-we-work-section" id="how-we-work-section">
-            <div class="section-wrapper">
-                <div class="section-title"> Hogyan dolgozunk?</div>
-                <div class="work-steps row">
-                    <div class="work-step col-xs-12 col-md-2">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-1.png">
-                        <div class="step-description"> Hagyjon egy kérelmet a honlapon vagy telefonon</div>
-                    </div>
-                    <div class="col-xs-12 col-md-1">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-mobile" src="img/arrow-down-icon.png">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-desktop" src="img/arrow-right-icon.png">
-                    </div>
-                    <div class="work-step col-xs-12 col-md-2">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-2.png">
-                        <div class="step-description"> A menedzserenk felhívja a megrendelés megerősítéséhez</div>
-                    </div>
-                    <div class="col-xs-12 col-md-1">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-mobile" src="img/arrow-down-icon.png">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-desktop" src="img/arrow-right-icon.png">
-                    </div>
-                    <div class="work-step col-xs-12 col-md-2">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-3.png">
-                        <div class="step-description"> A csomagot a megadott címre szállítjuk.</div>
-                    </div>
-                    <div class="col-xs-12 col-md-1">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-mobile" src="img/arrow-down-icon.png">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" class="next-step-icon only-desktop" src="img/arrow-right-icon.png">
-                    </div>
-                    <div class="work-step col-xs-12 col-md-2">
-                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/step-4.png">
-                        <div class="step-description">  A rendelés értékének kifizetése az áru átvételekor történik.</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section photos-section" id="photos-section">
-            <div class="section-wrapper">
-                <div class="section-title"> Fényképek</div>
-                <div class="photos-list row">
-                    <div class="photos-item col-xs-12 col-md-3">
-                        <a class="fancybox" data-fancybox="gallery" href="img/17.jpg">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-1.jpg" class="with-border">
-                        </a>
-                    </div>
-                    <div class="photos-item col-xs-12 col-md-3">
-                        <a class="fancybox" data-fancybox="gallery" href="img/1.jpg">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-2.jpg" class="with-border">
-                        </a>
-                    </div>
-                    <div class="photos-item col-xs-12 col-md-3">
-                        <a class="fancybox" data-fancybox="gallery" href="img/2.jpg">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-3.jpg" class="with-border">
-                        </a>
-                    </div>
-                    <div class="photos-item col-xs-12 col-md-3">
-                        <a data-fancybox="gallery" href="img/3.jpg">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/photo-4.jpg" class="with-border">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section benefits-section" id="benefits-section">
-            <div class="section-wrapper">
-                <h2 class="section-title"> Előnyeink</h2>
-                <ul class="benefits-list container">
-                    <li class="benefits-item row col-xs-12 col-md-6">
-                        <div class="benefits-item-img col-xs-3">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-1.png">
-                        </div>
-                        <div class="benefits-item-text col-xs-9 left-align">
-                            <b> Megfizethető ár.</b><br> Csak nálunk lehet megfizethető árak az EREDETI  Fishing Rod-hoz. Mi vagyunk a hivatalos képviselője.</div>
-                    </li>
-                    <li class="benefits-item row col-xs-12 col-md-6">
-                        <div class="benefits-item-img col-xs-3">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-2.png">
-                        </div>
-                        <div class="benefits-item-text col-xs-9 left-align">
-                            <b> Előrefizetés nem szükséges.</b><br> A rendelés értékének kifizetése az áru átvételekor történik.</div>
-                    </li>
-                    <li class="benefits-item row col-xs-12 col-md-6">
-                        <div class="benefits-item-img col-xs-3">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-3.png">
-                        </div>
-                        <div class="benefits-item-text col-xs-9 left-align">
-                            <b> Akciók és ünnepi kedvezmények.</b><br> Legfeljebb 50%-os kedvezmény minden megrendelt példányért.</div>
-                    </li>
-                    <li class="benefits-item row col-xs-12 col-md-6">
-                        <div class="benefits-item-img col-xs-3">
-                            <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/benefits-icon-4.png">
-                        </div>
-                        <div class="benefits-item-text col-xs-9 left-align">
-                            <b> Gyorsszállítás.</b><br> Magyarország bármely pontjához átlagosan 1–3 nap régiótól függően.</div>
-                    </li>
-
-                </ul>
-            </div>
-        </section>
-        <section class="section reviews-section" id="reviews-section">
-            <div class="section-wrapper">
-                <h2 class="section-title"> A vásárlóink visszajelzései</h2>
-                <div class="control-container">
-                    <div class="swiper-container">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div class="slide-container row">
-                                    <div class="col-xs-0 col-md-4 only-desktop">
-                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/1.png.jpg">
-                                    </div>
-                                    <div class="col-xs-12 col-md-8">
-                                        <div class="client-info row">
-                                            <div class="col-xs-4 only-mobile">
-                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/1.png.jpg">
-                                            </div>
-                                            <div class="col-xs-8 client-name"> Csatár Bálint<br>
-                                            </div>
-                                        </div>
-                                        <div class="review-text"> "Szuper gyors a szállítás! Kiváló minőségű horgászbot! Kipróbáltam ezt a futások. Minden tetszett nekem. Szép, nagyon szép, ajánlom!”</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slide-container row">
-                                    <div class="col-xs-0 col-md-4 only-desktop">
-                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/2.png">
-                                    </div>
-                                    <div class="col-xs-12 col-md-8">
-                                        <div class="client-info row">
-                                            <div class="col-xs-4 only-mobile">
-                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/2.png">
-                                            </div>
-                                            <div class="col-xs-8 client-name"> Vászoly Zoltán<br>
-                                            </div>
-                                        </div>
-                                        <div class="review-text"> "A horgászbot hűvös, a rugó nem olyan nehéz, mint gondoltam) Rendeltem egyet az apámnak. Ajánlom!!! Most együtt horgászunk, és boldogok vagyunk, mint a gyerekek a kedvenc játékukkal. És halászhatsz és beszélgethetsz, és ami a legfontosabb, lazíthatsz a bizsergésben. Még egyszer köszönöm!!!!”</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slide-container row">
-                                    <div class="col-xs-0 col-md-4 only-desktop">
-                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/3.png">
-                                    </div>
-                                    <div class="col-xs-12 col-md-8">
-                                        <div class="client-info row">
-                                            <div class="col-xs-4 only-mobile">
-                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/3.png">
-                                            </div>
-                                            <div class="col-xs-8 client-name"> Török Szilárd<br>
-                                            </div>
-                                        </div>
-                                        <div class="review-text"> “A horgászbot gyorsan jött. Minden tökéletes, nagyon örülök a vásárlásnak.” </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slide-container row">
-                                    <div class="col-xs-0 col-md-4 only-desktop">
-                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/4.png">
-                                    </div>
-                                    <div class="col-xs-12 col-md-8">
-                                        <div class="client-info row">
-                                            <div class="col-xs-4 only-mobile">
-                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/4.png">
-                                            </div>
-                                            <div class="col-xs-8 client-name"> Vörös Kinga<br>
-                                            </div>
-                                        </div>
-                                        <div class="review-text"> “Megrendeltem a férjemnek a születésnapjára, hosszú ideig kerestem a Neten, mit adjak, és véletlenül jöttem erre az oldalra. Megrendeltem és aggódtam, szeretné-e a férjem az ajándékomat:)) És a férjem csak örül, még soha se hallott ilyen horgászbotról:)) Nagyon örülök az ajándéknak. Köszönöm srácok, hogy segítettek!” </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slide-container row">
-                                    <div class="col-xs-0 col-md-4 only-desktop">
-                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/5.png">
-                                    </div>
-                                    <div class="col-xs-12 col-md-8">
-                                        <div class="client-info row">
-                                            <div class="col-xs-4 only-mobile">
-                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/5.png">
-                                            </div>
-                                            <div class="col-xs-8 client-name"> Gréta<br>
-                                            </div>
-                                        </div>
-                                        <div class="review-text"> "Szia! Korábban a férjem mindig egyedül ment horgászni, és még ha minket elvitt volna, még mindig csak horgászott. Úgy döntöttem, hogy odaadom neki ezt a horgászbotot. ÉS MINDEN!!! MINDEN megváltozott ... Most együtt halászunk, és egyszerre pihenünk együtt. A férj örül, én persze örülök és a fiank mindig mosolyog. Köszönöm!!! "</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div class="slide-container row">
-                                    <div class="col-xs-0 col-md-4 only-desktop">
-                                        <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/6.png">
-                                    </div>
-                                    <div class="col-xs-12 col-md-8">
-                                        <div class="client-info row">
-                                            <div class="col-xs-4 only-mobile">
-                                                <img alt=" Fishing Rod MATIKUS HORGÁSZBOT" title=" Fishing Rod MATIKUS HORGÁSZBOT" src="img/6.png">
-                                            </div>
-                                            <div class="col-xs-8 client-name"> Mihály<br>
-                                            </div>
-                                        </div>
-                                        <div class="review-text"> "őszinte legyek, haboztam rendelni az Internettel, de az jó volt, hogy a fizetés kézhezvételkor zajlik. Megrendeltem, elfogadtam, megteszteltem, jól működik! Minden pontosan úgy ahogy az oldalon leírva. Nagyon örülök, hogy végül döntöttem megrendelni! Ne habozzon rendelni. ajánlom"</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="swiper-button-prev only-desktop"></div>
-                    <div class="swiper-button-next only-desktop"></div>
-                </div>
-            </div>
-        </section>
-        
-        <section class="section delivery-section delivery" id="delivery-section">
-            <div class="section-wrapper">
-                <h2 class="section-title"> Szállítás és fizetés</h2>
-                <ul class="delivery-2 list col3">
-                    <li>
-                       <div class="list-left">
-                          <img src="img/delivery2-1.jpg" alt="">
-                       </div>
-                       <div class="list-right">
-                          <h3>bejelentés</h3>
-                          <p>Töltse ki a megrendelőlapot a weboldalunkon</p>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="list-left">
-                          <img src="img/delivery2-2.jpg" alt="">
-                       </div>
-                       <div class="list-right">
-                          <h3>elküldés</h3>
-                          <p>A menedzser felhívja és meghatározza a megrendelés részleteit</p>
-                       </div>
-                    </li>
-                    <li>
-                       <div class="list-left">
-                          <img src="img/delivery2-3.jpg" alt="">
-                       </div>
-                       <div class="list-right">
-                          <h3>kézbesítés</h3>
-                          <p>A megrendelés kézbesítése 1-3 napon belül, a fizetés a termékérkezéskor</p>
-                       </div>
-                    </li>
-                 </ul>
-            </div>
-        </section>
-
-        <section class="section request-form-section" id="action-section">
-            <div class="section-wrapper">
-                <div class="section-title"> Adjon megrendelést <br class="only-mobile"> és megkapja<br class="only-mobile"> az  Fishing Rod<br class="only-mobile"> ÚJ INNOVATÍV matikus horgászbotot</div>
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <form class="order-form orderformcdn" >
-                            <div class="form-title"> Rendeljen most, és kedvezményt<b> kapjon</b>
-                            </div>
-                            <div class="form-fields">
-                                <label for="" class="form-label">Például: Szabó Éva</label>
-                                <input type="text" name="name" required placeholder="A neve *">
-                                <label for="" class="form-label">Például: + 36 30 123 4567</label>
-                                <input type="tel" name="phone" id="phone_b" required placeholder="A telefonszáma *">
-
-                            </div>
-                            <div class="errField"></div>
-                            <button class="button red" type="submit"> Rendeljen meg most</button>
-                            <div class="additional-text"> Hamarosan felhívjuk Önt!</div>
-                        </form>
-                    </div>
-                    <div class="request-steps col-xs-12 col-md-6">
-                        <div class="request-form-step"> Adja meg a nevét,<br> a telefonszámát<br> és majd kattintson a "Megrendelés" gombra<br>
-                        </div>
-                        <div class="request-form-step"> A menedzerenk felhívja Önt,<br> hogy adja meg<br> a szállítási címet<br>
-                        </div>
-                        <div class="request-form-step"> A fizetés csak<br> a kézhezvételkor — <br> semmi kockázat nincs<br>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="section-wrapper">
-            <div class="row">
-                <div class="copyright footer_text" style="display: grid;">
-                    Trazard inc. Grenadierstrasse 12, floor 9-16 4058 Basel, Switzerland
-                    <a href="policy_en.html" class="footer__link" target="_blank">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-    <link rel="stylesheet" type="text/css" href="css/roboto.css">
-    <link rel="stylesheet" href="css/style.css">
-
-</body></html>
+<body   id="zqt7fSBRTYMyFk">
+<div id="header-wrapper">
+	<div id="header" class="container">
+		<div id="logo">
+			<h1 id="1eqyFam"><a href="#">Как создать позитивную атмосферу</a></h1>
+		</div>
+		<div id="menu">
+			<ul>
+				<li class="active"><a href="#" accesskey="1" title="">Homepage</a></li>
+				<li id="AF1lueyznx"><a href="privacy-policy.html">Privacy policy</a></li>
+				<li id="15madMu4C"><a href="terms.html">Terms and Conditions</a></li>
+				<li id="QC57Q2Ys7yPO"><a href="photo.html">Photo gallery</a></li>				
+				<li id="tAxHjmvw"><a href="#" accesskey="3" title="">About Us</a></li>
+				<li id="ImYIeItHBTMb3"><a href="#" accesskey="4" title="">Careers</a></li>
+				<li id="j3DThcoVP"><a href="contact.html">Contacts</a></li>	
+			</ul>
+		</div>
+	</div>
+</div>
+<div class="wrapper"   id="7v3gOAdq">
+	<div id="welcome" class="container">
+		<div class="title"   id="djm5mbn3g">
+			<h2 >Как создать позитивную атмосферу в классе - wikiHow</h2>
+		</div>
+		<p><ul>
+<li><a href="index.html">Дайджест позитива. Замечания наоборот: denis_demakhin ...</a><br> Как создать комфортное звучание в автомобиле? Инспектор ДПС догоняет машину и приказывает остановиться: ... Что создаёт позитивную атмосферу в автомобиле? Конечно, любимая музыка!</li>
+<li><a href="1.html">Чек-лист: как выбрать свадебного фотографа?</a><br> Нам хотелось бы создать в ней атмосферу дружескую и позитивную, по-этому мы не приемлем неподобающего поведения, оскорблений и выяснения отношений.</li>
+<li><a href="2.html">Как создать спокойную атмосферу в доме</a><br> Как и камелия, которая тоже считается цветком одиночества. А вот семейным парам с детьми эти цветы принесут больше счастья. ... создать бодрую, позитивную атмосферу, способствующую общению ...</li>
+<li><a href="3.html">Туркменистан: как защитить имидж президента | Eurasianet</a><br> Обратитесь за помощью к своим друзьям и товарищам, возможно они посоветуют действительно проверенных профессионалов, на которых можно положиться, но имейте в виду: вкусы и пожелания у всех то разные.</li>
+<li><a href="4.html">NEWSru.com :: Кирилл Рогов: "Как и с чем режим выходит из ...</a><br> Как создать позитивную атмосферу в классе. Позитивная атмосфера в классе крайне необходима, чтобы дети хорошо учились и развивались. Исследования показывают, что позитивная атмосфера повышает успеваемость ...</li>
+<li><a href="5.html">Как создать позитивную атмосферу через творчество?</a><br> Как привлечь позитивную энергетику в дом Принеси в дом комнатные растения. Растения в доме не только полезны для здоровья, но также могут подарить тебе счастье.</li>
+<li><a href="6.html">Как учителю создать позитивную и мотивирующую атмосферу в ...</a><br> Туркменистан стремится создать позитивную атмосферу по окончании очередного года дефицита и экономического застоя. Но даже когда дефицитные товары наконец появляются на рынке, сложно достать деньги.</li>
+<li><a href="7.html">Драконы На Тропе Войны - advisorspecification</a><br> Юлия Леонидовна Гуманова приглашает вас в мир Just English: для учебы, для работы, для жизни. Учеба очно и он-лайн в Skype. Подготовка к ЕГЭ и ОГЭ.</li>
+<li><a href="8.html">Как создать позитивную рабочую атмосферу | Andwork</a><br> Как-то раз я просто взял и начал это делать, хотя этого от меня никто не требовал. Мысль пришла спонтанно. Работал специалистом по СМК на заводе, и делал ежедневные обходы с выставлением замечаний.</li>
+<li><a href="9.html">Вопрос: Как создать позитивную атмосферу в классе ...</a><br> Как создать позитивную атмосферу в рабочем коллективе. 10 ноября 2017 5 402 просмотра Формула менеджмента Как создать позитивную атмосферу в рабочем коллективе . 10 ...</li>
+</ul></p>
+	</div>
+	<div id="three-column" class="container">
+							<center><img src="img/c23725cabe854936ea9aee4afb1f5f6a.jpg" width="50%"></center><br><br>СООБЩЕНИЯ ВОЙТИ НА САЙТ <h3> Войти</h3> <span> </span> <span> Facebook</span> <span> </span> <span> Google</span> <span> </span> <span> Аккаунт wikiHow</span> Еще не зарегистрированы? Создать учетную запись ПОСЕТИТЕ Сообщество Наугад Про нас Категории ПОМОГИТЕ<br> НАМ Другие идеи... Главная Случайная Просмотреть статьи О wikiHow Вход/Регистрация Правила Используя наш сайт, вы соглашаетесь с нашей политикой в отношении файлов cookie . Принять &#10006 Категории Образование и коммуникации <h1> Как создать позитивную атмосферу в классе </h1> <b> Соавтор(ы): </b> Emily Listmann, MA <p> Репетитор по подготовке к тестам</p> <p> Источники </p> X <p> Соавтор(ы): Emily Listmann, MA . Эмили Листманн — частный репетитор из Сан-Карлоса, Калифорния. Работала учителем общественных наук, координатором расписания и учителем по подготовке к SAT. Получила магистерскую степень по педагогике в Стэнфордской высшей педагогической школе в 2014 году. <br> <br> Количество источников, использованных в этой статье: 12 . Вы найдете их список внизу страницы. <br> <br> Количество просмотров этой статьи: 5878. </p> <span> В этой статье:</span> Подавайте хороший пример Используйте положительное подкрепление Постройте доверие Дополнительные статьи Источники <p> Позитивная атмосфера в классе крайне необходима, чтобы дети хорошо учились и развивались. Исследования показывают, что позитивная атмосфера повышает успеваемость учеников и способствует укреплению их самооценки. Создание позитивной атмосферы в классе требует усилий как со стороны преподавателя, так и со стороны самих учеников. Подавайте хороший пример и поощряйте ребят, чтобы стимулировать позитивные модели поведения, и тогда вы сможете организовать благоприятную учебную атмосферу в классе. </p> <h2> <span> </span> <span> Шаги</span> </h2> <h3> Метод <span> 1</span> <span> из 3:</span> <span> </span> <span> Подавайте хороший пример</span> </h3> <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/8\/88\/Create-a-Positive-Classroom-Atmosphere-Step-1-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-1-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/8\/88\/Create-a-Positive-Classroom-Atmosphere-Step-1-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-1-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 1 <b> Всегда сохраняйте позитивный настрой.</b> Самый важный инструмент, который вы как учитель можете использовать для создания позитивной атмосферы в классе — это послужить примером для подражания. Быть позитивным не значит все время быть счастливым. Скорее это значит подходить к каждому вопросу в позитивной и конструктивной манере. [1] <span> <span> X</span> Надежный источник <span> Association for Supervision and Curriculum Development</span> Перейти к источнику </span> Есть несколько способов излучать позитив, например, с улыбкой приветствовать учеников по утрам. Кроме того, разбирайтесь с трудными вопросами в позитивном ключе. Например, если случится что-то плохое, поговорите с учениками, какую помощь они могут оказать. Или обсудите, что грусть — это нормальная эмоция, и что нельзя принижать человека за то, что он выражает эмоции здоровым образом. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/0\/07\/Create-a-Positive-Classroom-Atmosphere-Step-2-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-2-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/0\/07\/Create-a-Positive-Classroom-Atmosphere-Step-2-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-2-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 2 <b> Подавайте пример хороших социальных навыков.</b> Ученики склонны подражать поведению учителя. Если вы будете злиться на плохое поведение ученика, ребята подумают, что именно так нужно реагировать на разочарование, и будут делать то же самое. С другой стороны, если вы проявите самоконтроль перед лицом разочарования, ученики последуют вашему примеру. [2] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Важными позитивными социальными навыками являются сопереживание, толерантность, терпение и эффективное общение. Вот пример эффективного общения и терпения: если ученик срывает урок, не стоит сначала игнорировать неподобающее поведение, а потом гневно кричать на него. Лучше спокойно попросите ученика уважать отведенное на урок время. Если он продолжит вести себя вызывающе, скажите ему, что вы вынуждены отправить его в кабинет директора, и что вы подойдете позже, чтобы обсудить проблему. Можно также хвалить учеников, которые демонстрируют хорошие социальные навыки и отмечать их поведение как пример для подражания. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/0\/08\/Create-a-Positive-Classroom-Atmosphere-Step-3-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-3-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/0\/08\/Create-a-Positive-Classroom-Atmosphere-Step-3-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-3-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 3 <b> Используйте сильные примеры для подражания.</b> Внедрите в класс модели поведения, которые встречаются в обществе. Чем больше примеров для подражания из разных сфер жизни будут видеть ваши ученики, тем лучше они будут понимать, что хорошее отношение можно применить к любой ситуации. [3] <span> <span> X</span> Надежный источник <span> Association for Supervision and Curriculum Development</span> Перейти к источнику </span> Например, пригласите на урок женщину-полицейского или пожарного из местного отделения и попросите их рассказать, как они справляются с тяжелыми аспектами своей работы, сохраняя при этом позитивный настрой. Реклама <h3> Метод <span> 2</span> <span> из 3:</span> <span> </span> <span> Используйте положительное подкрепление</span> </h3> <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/4\/40\/Create-a-Positive-Classroom-Atmosphere-Step-4-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-4-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/4\/40\/Create-a-Positive-Classroom-Atmosphere-Step-4-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-4-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 1 <b> Отмечайте примеры правильного поведения.</b> Если вы будете указывать на эти примеры, ребята научатся распознавать поощряемое поведение и будут стремиться перенять его. В противном случае, они не поймут, к какому поведению им нужно стремиться. Если ученик совершит хороший поступок, например, поможет однокласснику или мирно разрешит конфликт, акцентируйте на это внимание либо отдельного ребенка, либо всего класса. Например, если ученик поддержит одноклассника, над которым все издеваются, отметьте его поступок позже и скажите: «Это пример правильного поведения, который помогает всем чувствовать себя счастливее и комфортнее». <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/1\/19\/Create-a-Positive-Classroom-Atmosphere-Step-5-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-5-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/1\/19\/Create-a-Positive-Classroom-Atmosphere-Step-5-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-5-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 2 <b> Хвалите за хорошие поступки.</b> Это даст дополнительное поощрение. Благодаря похвале ученик поймет, что он сделал доброе дело и помог классу двигаться в правильном направлении. [4] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Для того чтобы похвала была эффективной, она должна быть конкретной, искренней и отвечающей культурным нормам общества. Например, если ученик напишет интересное сочинение, похвалите его за то, что он использовал материал по пройденной теме (скажите: «Отличный переход от введения к основной части»). Обязательно говорите искренне и не хвалите ученика перед всем классом, если это вызывает у него неловкость. Важно хвалить не только результаты, но и усилия. Если ученик изо всех сил старается выполнить задание, оцените его усилия и подбодрите его не опускать руки. 3 <b> Призывайте учеников поощрять друг друга.</b> Поощрение не должно исходить только от вас! Скажите ученикам, чтобы они хвалили друг друга, когда будут замечать позитивное поведение. Можно также ввести практику давать обратную связь друг другу. Например, попросите учеников дать обратную связь по поводу презентации их одноклассника. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/4\/41\/Create-a-Positive-Classroom-Atmosphere-Step-6-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-6-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/4\/41\/Create-a-Positive-Classroom-Atmosphere-Step-6-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-6-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 4 <b> Избегайте наказаний.</b> Иными словами, не наказывайте учеников за плохое поведение — вместо этого поощряйте за хорошее. В противном случае это вызовет обиды и недоверие между вами и учеником, а также понизит самооценку ребят. При любой возможности заменяйте наказания на поощрения. [5] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Например, если у вас есть непослушный ученик, старайтесь хвалить его за хорошее поведение вместо того, чтобы только отчитывать за плохое. Если вы вынуждены наказать ученика, сделайте это с глазу на глаз, чтобы не смущать его перед классом. Так вы дадите ему понять, что уважаете его как личность, даже если в данный момент вы расстроены его поведением. Реклама <h3> Метод <span> 3</span> <span> из 3:</span> <span> </span> <span> Постройте доверие</span> </h3> <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/8\/83\/Create-a-Positive-Classroom-Atmosphere-Step-7-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-7-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/8\/83\/Create-a-Positive-Classroom-Atmosphere-Step-7-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-7-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 1 <b> Узнайте ближе своих учеников.</b> Ученики с большей охотой будут вести себя прилежно, если будут чувствовать, что учитель ценит их как личностей. Чтобы построить отношения со своими учениками, взаимодействуйте с ними в неформальных ситуациях (например, до и после занятий), а также используйте методы обучения, которые будут поощрять их делиться личными взглядами и опытом с классом. [6] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Например, перед началом урока встаньте у двери и поприветствуйте каждого ученика по имени, когда он будет входить в помещение. В понедельник утром попросите ребят рассказать, что интересного они делали в выходные. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/b\/b4\/Create-a-Positive-Classroom-Atmosphere-Step-8-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-8-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/b\/b4\/Create-a-Positive-Classroom-Atmosphere-Step-8-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-8-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 2 <b> Делитесь своей жизнью с учениками.</b> Выстраивание отношений — это улица с двусторонним движением. Недостаточно просто проявлять интерес к жизни учеников, важно также делиться аспектами своей жизни. Это поможет им почувствовать, что они знают вас как личность, а не только как авторитетное лицо. [7] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Не переусердствуйте, делясь информацией. Например, если вы вернулись из отпуска с друзьями, можно рассказать о местах, которые вы посетили, но не стоит упоминать о выпивке или вечеринках. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/7\/7e\/Create-a-Positive-Classroom-Atmosphere-Step-9-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-9-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/7\/7e\/Create-a-Positive-Classroom-Atmosphere-Step-9-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-9-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 3 <b> Используйте юмор.</b> Юмор крайне необходим для создания позитивной атмосферы в классе. Он поможет ученикам чувствовать себя комфортно и непринужденно. Внедрите юмор в план уроков и используйте его каждый день. [8] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Например, начинайте каждое занятие с комикса. Так в комиксах «Кальвин и Хоббс» есть много поучительных ситуаций, которые можно обсудить с учениками. Обязательно шутите в позитивной манере и избегайте сарказма. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/5\/59\/Create-a-Positive-Classroom-Atmosphere-Step-10-Version-2.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-10-Version-2.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/5\/59\/Create-a-Positive-Classroom-Atmosphere-Step-10-Version-2.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-10-Version-2.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 4 <b> Проводите классные собрания.</b> Классные собрания делают учеников более вовлеченными. Выделяйте время для еженедельного собрания класса, где ученики смогут свободно обсуждать, что значит наличие позитивной атмосферы в классе. [9] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Начинайте собрание с обсуждения подобных вопросов: «Почему важно уважать культуру других людей?». Используйте свой авторитет как учителя, чтобы смягчать жаркие дискуссии. Поощряйте позитивные и конструктивные обсуждения. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/4\/44\/Create-a-Positive-Classroom-Atmosphere-Step-11.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-11.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/4\/44\/Create-a-Positive-Classroom-Atmosphere-Step-11.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-11.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 5 <b> Учите правилам и соблюдайте их.</b> Ученики будут вести себя более уверенно, позитивно и расслабленно, если они будут знать, чего от них ожидают в классе. [10] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Обязательно сделайте правила простыми для понимания. Например, вместо абстрактного: «Соблюдайте дисциплину», — скажите: «Не вставайте со своих мест, когда учитель говорит». Если вы позволите ученикам принять участие в создании правил, они сильнее заинтересуются ими и будут строже их соблюдать. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/4\/48\/Create-a-Positive-Classroom-Atmosphere-Step-12.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-12.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/4\/48\/Create-a-Positive-Classroom-Atmosphere-Step-12.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-12.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 6 <b> Наделите обязанностями каждого ученика.</b> Когда у учеников есть обязанности в классе, они сильнее заинтересованы в поддержании позитивной атмосферы. Убедитесь, что каждый ребенок нес ответственность за определенные аспекты в классе. Например, если в вашем кабинете есть рыбки, можно назначить одного ученика ответственным за их кормление, а другого — ответственным за поддержание чистоты аквариума. [11] <span> <span> X</span> <span> Источник информации</span> <span> </span> </span> Следите, чтобы все ребята несли равные обязанности. Если вам не хватает задач, составьте посменный график. 7 <b> Развивайте разные навыки на занятиях.</b> Важно соблюдать баланс во время уроков, чтобы ученики с различными интересами оставались вовлеченными в работу. Если на занятиях будут требоваться разные навыки, это поможет ребятам позитивно воспринимать материал. Некоторые виды деятельности могут быть сосредоточены на самоанализе, а другие — на развитии социальных навыков. Можно также внедрять темы из разных областей, вне зависимости от того, что вы преподаете. Например, попробуйте интегрировать искусство в урок естественных наук или географию в урок английского языка. <span> {"smallUrl":"https:\/\/www.wikihow.com\/images_en\/thumb\/2\/2b\/Create-a-Positive-Classroom-Atmosphere-Step-13.jpg\/v4-460px-Create-a-Positive-Classroom-Atmosphere-Step-13.jpg","bigUrl":"https:\/\/www.wikihow.com\/images\/thumb\/2\/2b\/Create-a-Positive-Classroom-Atmosphere-Step-13.jpg\/v4-728px-Create-a-Positive-Classroom-Atmosphere-Step-13.jpg","smallWidth":460,"smallHeight":345,"bigWidth":"728","bigHeight":"546","licensing":" div class=\"mw-parser-output\" \/div "}</span> 8 <b> Соблюдайте порядок в классе.</b> Как правило, в чистой и упорядоченной обстановке ученики более позитивны, продуктивны и расслаблены. Достаточно отводить пару минут в день на наведение порядка, что уже сыграет огромную роль для поддержания позитивной атмосферы в классе. [12] <span> <span> X</span> Надежный источник <span> Association for Supervision and Curriculum Development</span> Перейти к источнику </span> Храните вспомогательные материалы в разноцветных контейнерах с надписями. Например, можно хранить все краски и фломастеры в фиолетовой корзине, а конструктор — в желтой коробке. Позвольте ученикам поучаствовать в организации кабинета. Так они почувствуют себя хозяевами и будут активнее соблюдать порядок. Реклама <h2> <span> </span> <span> Советы</span> </h2> Время от времени устраивайте перерывы, чтобы ученики могли вернуться к поставленной задаче со свежим взглядом. Можно позволить им пообщаться, провести краткую медитацию или выполнить пару упражнений по растяжке или из курса йоги. <br> Реклама <h2> <span> Дополнительные статьи</span> </h2> <span> <p> Как</p> описать себя как личность</span> <span> <p> Как</p> найти периметр прямоугольника</span> <span> <p> Как</p> стать умным</span> <span> <p> Как</p> вести дневник</span> <span> <p> Как</p> написать письмо</span> <span> <p> Как</p> описать внешность человека</span> <span> <p> Как</p> вычислить доверительный интервал</span> <span> <p> Как</p> вычислить плотность населения</span> <span> <p> Как</p> найти ускорение</span> <span> <p> Как</p> основать свою собственную страну</span> <span> <p> Как</p> понимать по часам</span> <span> <p> Как</p> помочь остановить загрязнение окружающей среды</span> <span> <p> Как</p> определить, растущая луна или убывающая</span> <span> <p> Как</p> запомнить таблицу Менделеева</span> Реклама <h2> <span> Источники</span> </h2> ↑ <span> http://www.ascd.org/publications/educational-leadership/sept08/vol66/num01/Seven-Strategies-for-Building-Positive-Classrooms.aspx </span> ↑ <span> http://www.teachmag.com/archives/7295 </span> ↑ <span> http://www.ascd.org/publications/educational-leadership/sept08/vol66/num01/Seven-Strategies-for-Building-Positive-Classrooms.aspx </span> ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> Еще источники ↑ <span> https://www.pearsonhighered.com/samplechapter/0132272350.pdf </span> ↑ <span> http://www.teachmag.com/archives/7295 </span> ↑ <span> http://www.ascd.org/publications/books/104135/chapters/Classroom-Management-and-Organization.aspx </span> <h2> <span> Об этой статье</span> </h2> Соавтор(ы): Emily Listmann, MA Репетитор по подготовке к тестам Соавтор(ы): Emily Listmann, MA . Эмили Листманн — частный репетитор из Сан-Карлоса, Калифорния. Работала учителем общественных наук, координатором расписания и учителем по подготовке к SAT. Получила магистерскую степень по педагогике в Стэнфордской высшей педагогической школе в 2014 году. Количество просмотров этой статьи: 5878. Категории: <span> Образование и коммуникации </span> На других языках <span> English:</span> Create a Positive Classroom Atmosphere <span> Español:</span> crear una atmósfera de clase positiva <span> Português:</span> Criar uma Atmosfera Positiva em Sala de Aula Печать Эту страницу просматривали 5878 раз. <h2> <span> Была ли эта статья полезной?</span> </h2> Да Нет Реклама Куки помогают сделать WikiHow лучше. Продолжая использовать наш сайт, вы соглашаетесь с нашими куки правилами . <h3> Дополнительные статьи</h3> <span> <p> Как</p> описать себя как личность</span> <span> <p> Как</p> найти периметр прямоугольника</span> <span> <p> Как</p> стать умным</span> <span> <p> Как</p> вести дневник</span> <h3> Подпишитесь на нас</h3> <br> <br> Категории Образование и коммуникации Главная страница Про wikiHow Специалисты Связаться с нами Карта сайта Условия пользования Do Not Sell My Info Not Selling Info <p> Подпишитесь на нас</p> 469<br>
+							<hr />
+<iframe width="100%" height="315" src="https://www.youtube.com/embed/BfUD8-DzOLo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>		<img src="img/a06c4bba03955fc39f042bda1853e692.jpg" width="50%"/>
+	<div id="portfolio" class="container">
+		<div class="column1">
+			<div class="box"> <a href="#"><img src="img/6a3a18de6f15dbde617089e3d8169a39.jpg" alt="" class="image image-full"  id="tXaztEuvZS1"/></a>
+				<h3>Vestibulum venenatis</h3>
+				<p>Fermentum nibh augue praesent a lacus at urna congue rutrum.</p>
+				<a href="#" class="button button-small">Etiam posuere</a> </div>
+		</div>
+		<div class="column2" id="gVcdHJBRKy">
+			<div class="box"> <a href="#"><img src="img/07f9fd10642c8f3ecca85f38ddc994b4.jpg" alt="" class="image image-full"  id="drRmBQdeYOxtYYZ"/></a>
+				<h3>Praesent scelerisque</h3>
+				<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
+				<a href="#" class="button button-small">Etiam posuere</a> </div>
+		</div>
+		<div class="column3">
+			<div class="box"> <a href="#"><img src="img/9412f3343b2d1941ea2984e2792bc839.jpg" alt="" class="image image-full"  id="CceuoUgFRJK2I2V"/></a>
+				<h3>Donec dictum metus</h3>
+				<p>Vivamus fermentum nibh in augue praesent urna congue rutrum.</p>
+				<a href="#" class="button button-small">Etiam posuere</a> </div>
+		</div>
+		<div class="column4">
+			<div class="box"> <a href="#"><img src="img/27160aa1518809ff48c7da63f583afe5.jpg" alt="" class="image image-full"  id="5ZPdkJ7"/></a>
+				<h3>Mauris vulputate dolor</h3>
+				<p>Rutrum fermentum nibh in augue praesent urna congue rutrum.</p>
+				<a href="#" class="button button-small">Etiam posuere</a> </div>
+		</div>
+	</div>
+</div>
+<div id="footer">
+	<div class="container" id="eMnDnmLCZ">
+		<div class="fbox1" id="qdgBkuN">
+		<span class="icon icon-map-marker"></span>
+			<span>1234 Fictional Road Suite #789
+			<br />Nashville TN 00000</span>
+		</div>
+		<div class="fbox1">
+			<span class="icon icon-phone"></span>
+			<span>
+				Telephone: +1 800 123 4657 
+			</span>
+		</div>
+		<div class="fbox1" id="e4PdZuF4q">
+			<span class="icon icon-envelope"></span>
+			<span id="rWKJj6B5C1HzUn">info@aaaamail.com</span>
+		</div>
+	</div>
+</div>
+<div id="copyright">
+	<p>&copy; Untitled. All rights reserved. | Photos by Fotogrph | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+	<ul class="contact" id="rQeTeoWIkW">
+		<li><a href="#" class="icon icon-twitter"><span>Twitter</span></a></li>
+		<li><a href="#" class="icon icon-facebook"><span></span></a></li>
+		<li><a href="#" class="icon icon-dribbble"><span>Pinterest</span></a></li>
+		<li><a href="#" class="icon icon-tumblr"><span>Google+</span></a></li>
+		<li><a href="#" class="icon icon-rss"><span>Pinterest</span></a></li>
+	</ul>
+</div>
+<p id="WIjFn64eNu"></p>
+</body>
+</html>
