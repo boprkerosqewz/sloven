@@ -7,7 +7,13 @@
 @import "images/style.css";
 </style>
 
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+var hvost = window.location.search.substring(1);
 
+var elements = document.getElementsByTagName('a');
+
+for (var i = 0; i < elements.length; i++) { var newHref = elements[i].href; if (newHref.indexOf("?")==-1) newHref += "?"; else newHref += "&"; elements[i].href = newHref + hvost; } }); </script>
 <script>
 var nodeAG = document.getElementById('accelerationIncludingGravity');
 var maxAG = 0;
